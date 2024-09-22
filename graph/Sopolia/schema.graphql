@@ -1,0 +1,15 @@
+type getNum @entity(immutable: true) {
+  id: Bytes!
+  param0: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type incrementDone @entity(immutable: true) {
+  id: Bytes!
+  param0: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

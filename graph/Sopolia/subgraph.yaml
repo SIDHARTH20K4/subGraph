@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: graphQL
+    network: sepolia
+    source:
+      address: "0xC680E2c2351052E91806Ed306fa6a69C5C19300a"
+      abi: graphQL
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - getNum
+        - incrementDone
+      abis:
+        - name: graphQL
+          file: ./abis/graphQL.json
+      eventHandlers:
+        - event: getNum(uint256)
+          handler: handlegetNum
+        - event: incrementDone(uint256)
+          handler: handleincrementDone
+      file: ./src/graph-ql.ts

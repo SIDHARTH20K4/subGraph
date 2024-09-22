@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "graphQL": {
+      "address": "0xC680E2c2351052E91806Ed306fa6a69C5C19300a",
+      "startBlock": 0
+    }
+  }
+}
